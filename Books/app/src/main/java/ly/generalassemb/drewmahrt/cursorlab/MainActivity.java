@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
         db.setVersion(1);
         db.setLocale(Locale.getDefault());
 
-        String[] titles = new String[]{"Harry Potter and the Sorcerers Stone","Harry Potter and the Chamber of Secrets","The Martian"};
-        String[] authors = new String[]{"J. K. Rowling","J. K. Rowling","Andy Weir"};
-        int[] years = new int[]{1997,1998,2011};
+        String[] titles = new String[]{"Harry Potter and the Sorcerers Stone","Harry Potter and the Chamber of Secrets","The Martian","The Hobbit","Catcher in the Rye","Catch-22"};
+        String[] authors = new String[]{"J. K. Rowling","J. K. Rowling","Andy Weir","J.R.R. Tolkien","J.D. Salinger","Joseph Heller"};
+        int[] years = new int[]{1997,1998,2011,1937,1951,1961};
         db.execSQL("CREATE TABLE IF NOT EXISTS tbl_books (title VARCHAR, author VARCHAR, year VARCHAR);");
         for (int i=0; i<titles.length;i++) {
             db.execSQL("INSERT INTO tbl_books Values ('" + titles[i] + "', '"+ authors[i] + "', '" + years[i] +"');");
